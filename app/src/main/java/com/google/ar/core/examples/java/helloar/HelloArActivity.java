@@ -279,6 +279,7 @@ public class HelloArActivity extends AppCompatActivity implements GLSurfaceView.
     Pose camera_pose = camera.getDisplayOrientedPose();
     try {
       String cameraPoseFilename = "camera_pose.txt";
+      Log.i("saveCameraPose", "Log file: " + getExternalFilesDir(folderToSave) + "/" + cameraPoseFilename);
       File outFile = new File(getExternalFilesDir(folderToSave), cameraPoseFilename);
       if (!outFile.exists()) {
         outFile.createNewFile();
